@@ -1,3 +1,8 @@
+/* Centered heading */
+h1 {
+    text-align: center;
+}
+
 /* Transition when moving to right or left */
 .sg-left-move, .sg-right-move {
     transition: transform .6s cubic-bezier(.29, .15, .24, .97);
@@ -48,9 +53,8 @@
 
 /* Style for a single slide inside the group box, just for having better appealing look */
 .slide {
-    background: #FFF;
     text-align: left;
-    border: solid 1px #ccc;
+    border: solid 1px black;
     padding: 1rem;
     margin: 1rem 0;
 }
@@ -137,7 +141,7 @@ img {
 
 /* Style fo the settings section, should have an appearance of a surrounding border and be centered */
 #settings {
-    width: 100%;
+    width: 80%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;

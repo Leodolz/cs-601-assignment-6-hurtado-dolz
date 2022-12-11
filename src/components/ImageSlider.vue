@@ -1,4 +1,5 @@
 <template>
+  <h1>Image Gallery</h1>
   <!-- We use transition-group as a base from our image carousel. With CSS we can make a good implementation -->
   <!-- We add a callback before a current item leaves and we add a name depending on the direction it will go -->
   <transition-group tag="div" class="slide-group"
@@ -244,5 +245,6 @@ export default {
 </script>
 
 <style scoped>
+/* Importing style from another file for a more organized way of styling this component */
 @import '@/styles/imageSliderStyle.css';
 </style>

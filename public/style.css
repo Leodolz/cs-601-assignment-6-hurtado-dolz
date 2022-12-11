@@ -1,0 +1,4 @@
+/* This is formatting the entire webpage background using gradient */
+body {
+    background: linear-gradient(to bottom right, lightblue, white) fixed;
+}
