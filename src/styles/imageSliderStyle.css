@@ -1,0 +1,177 @@
+/* Transition when moving to right or left */
+.sg-left-move, .sg-right-move {
+    transition: transform .6s cubic-bezier(.29, .15, .24, .97);
+}
+
+/* Transition when the active slide leaves */
+.sg-left-leave-active, .sg-right-leave-active {
+    transition: opacity .3s linear, transform .3s cubic-bezier(.64, .01, .67, .92);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Transition for the entering active slide */
+.sg-left-enter-active, .sg-right-enter-active {
+    transition: opacity .3s linear, transform .3s cubic-bezier(.29, .15, .24, .97);
+    transition-delay: .25s, .3s;
+}
+
+/* Transition just after leaving and right before entering */
+.sg-left-enter, .sg-right-enter,
+.sg-left-leave-to, .sg-right-leave-to {
+    opacity: 0;
+}
+
+/* Styling for how the left transition is starting to leave and how the right is about to enter */
+.sg-left-leave-to,
+.sg-right-enter {
+    transform: translateX(30%);
+}
+
+/* Styling for how the left transition is about to enter and how the right is starting to leave */
+.sg-left-enter,
+.sg-right-leave-to {
+    transform: translateX(-30%);
+}
+
+/* Reference on the styling above: https://vuejs.org/guide/built-ins/transition-group.html#move-transitions */
+
+/* Size and alignment for the container of the carousel */
+.slide-group {
+    width: 80%;
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Style for a single slide inside the group box, just for having better appealing look */
+.slide {
+    background: #FFF;
+    text-align: left;
+    border: solid 1px #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* Style for the svg element which is containing the polyline */
+svg {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+}
+
+/* Small styling on the image of the slide */
+.slide img {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Styling for navigational items, in our case our polyline arrows */
+.nav {
+    margin-top: 4em;
+    display: flex;
+    width: 2em;
+    fill: none;
+    stroke: #000;
+    cursor: pointer;
+    transition: stroke 0.2s linear;
+}
+
+/* When hovering on the arrows, this color should be highlighted */
+.nav:hover, .nav:focus {
+    stroke: #5593d0;
+}
+
+/* Style for the arrow that will go to the previous slide */
+#previous-arrow {
+    left: 0.5em;
+    float: left;
+}
+
+/* Style for the arrow that will go to the next slide */
+#next-arrow {
+    right: 0.5em;
+    float: right;
+}
+
+/* The preloader container that should have almost no size because this is a container that will load all the images
+ making the transition smoother */
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    padding: 1px;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+/* Every element in this component should have this style */
+* {
+    box-sizing: border-box;
+}
+
+/* Pointer on button for a more familiar user experience */
+button {
+    cursor: pointer;
+}
+
+/* Sizes on each image in general */
+img {
+    min-width: 400px;
+    max-width: 600px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Every image that is of this class, should have this border, in our specific case is for showing this border
+   for earlier images */
+.hovered {
+    border: #9f6d21 solid 5px;
+    border-radius: 35px;
+}
+
+/* Style fo the settings section, should have an appearance of a surrounding border and be centered */
+#settings {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: #2c3e50 solid 1px;
+    padding: 10px 10px;
+}
+
+/* Styling for smaller screen sizes, usually mobile devices */
+@media (max-width: 600px) {
+
+    /* Every slide should cover the full size */
+    .slide {
+        width: 100%;
+    }
+
+    /* Every image should cover lesser space and have a minimum width and height */
+    img {
+        width: 65%;
+        min-width: 10px;
+        min-height: 10px;
+        height: auto;
+    }
+
+    /* The arrows will have a smaller size */
+    svg {
+        width: 25px;
+        height: 35px;
+    }
+
+    /* Both arrows should have a margin for better positioning */
+    .nav {
+        margin-top: 1em;
+    }
+}
