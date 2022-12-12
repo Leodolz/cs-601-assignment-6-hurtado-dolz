@@ -139,7 +139,7 @@ export default {
       byHoover: true,
       // Slides array for display in carousel
       slides: [
-          // Each item has the same attributes as below
+        // Each item has the same attributes as below
         {
           // The title of the slide
           title: 'Fidel Anze Park',
@@ -159,13 +159,13 @@ export default {
               "was no investment from the city.",
           // The earlier image alt
           earlierImageAlt: 'Image of the Fidel Anze park in the past, it shows a park with tall grass and no walkways',
-          // The boolean that indicates if the slide should display the earlier image or not
           isEarlier: false,
         },
         {
           title: 'Plaza 4 de Noviembre',
           image: require('@/assets/plaza-4-de-noviembre-after.jpeg'),
-          imageAlt: '',
+          imageAlt: 'Image of a plaza at night with a circular fountain with different lights of colors. It shows' +
+              'it is surrounded by a rotary road',
           content: "This plaza has been renewed and now had better fountains and contains better security to ensure " +
               "a safe walk for people nearby at all hours.\nThis place is usually more crowded on the evenings.",
           earlierImage: require('@/assets/plaza-4-de-noviembre-before.jpeg'),
@@ -173,19 +173,21 @@ export default {
               "had almost no security and it had no investment from the major's office.\nIts characteristic fountain " +
               "did not work and it contained a kiosk for buying snacks. This place was mostly surrounded by houses " +
               "and some buildings.",
-          earlierImageAlt: 'Alt 2',
+          earlierImageAlt: 'Image of the plaza called "4 de Noviembre" showing an empty circular plaza with a turned ' +
+              'off fountain in a rectangle shape',
           isEarlier: false,
         },
         {
           title: 'Plaza 14 de Septiembre',
           image: require('@/assets/plaza-14-septiembre-after.jpeg'),
-          imageAlt: '',
+          imageAlt: 'Image of a plaza with different kinds of flowers, a fountain and a cathedral with a big clock',
           content: "This plaza is used by people living nearby for taking a stroll and the government usually " +
-              "organizes informing events at daylight.\nThis place is also nearby the major's office",
+              "organizes informing events at daylight.\nThis place is also nearby a government's office and has " +
+              "its characteristic cathedral",
           earlierImage: require('@/assets/plaza-14-septiembre-before.jpeg'),
           earlierContent: "This plaza is where the first protests against colonies were done and where the dream " +
               "of a republic started.\nThis plaza celebrates the oldest foundation against colonies in Bolivia",
-          earlierImageAlt: '',
+          earlierImageAlt: 'Black and white image of a cathedral surrounded by trees',
           isEarlier: false,
         },
         {
@@ -200,14 +202,15 @@ export default {
           earlierImage: 'https://i.goalzz.com/?i=katkotati%2Fstade%2Fsud_amerique%2Festadio+felix.jpg',
           earlierContent: "This is the stadium before its restoring work, this picture shows how it was already " +
               "in need for maintenance and shows a less diverse set of colors.",
-          earlierImageAlt: '',
+          earlierImageAlt: 'Image of a basic stadium which contains a grass soccer field, a tracking field and ' +
+              'illuminating posts surrounding this elliptic shaped place',
           isEarlier: false,
         },
         {
           title: 'Alalay Lake',
           image: 'https://www.pub.eldiario.net/noticias/2016/2016_04/nt160429/f_2016-04-29_17.jpg',
           imageAlt: 'An image of how the Alalay lake located in Cochabamba looks now, it shows a picture of a ' +
-              'lae surrounded by city and houses',
+              'lake surrounded by city and houses',
           content: "This lake is a place with a nice view and is surrounded by both a walkway and a bike way " +
               "as it has a big radius, many people use it for doing exercise while having a good view.\nOn its " +
               "surroundings there is a construction covering a big area that is used for hosting the annual fair " +
@@ -235,7 +238,8 @@ export default {
           earlierContent: "This place was even more crowded in the past as it was one of a handful of plazas " +
               "for doing different activities. Protests and gatherings were usually done here as this place " +
               "was still doing activities for working on the foundations of this city.",
-          earlierImageAlt: '',
+          earlierImageAlt: 'Black and white image of a busy plaza filled with people strolling around, it ' +
+              'depicts a wide building on the left in an old-school architecture',
           isEarlier: false,
         }
       ]
